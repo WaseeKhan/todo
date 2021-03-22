@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1>Edit Your Task Here </h1>
+<form action="/updatetask/{{todopk}}/update/" method="POST">	{% csrf_token %}
+
+<input type="text" name="task">
+<input type="submit" value="update" class="btn btn-success" name=update>
+</form>
+
+{% endblock %}
